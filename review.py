@@ -10,7 +10,12 @@ response = client.chat.completions.create(
     messages=[
         {
             "role": "user",
-            "content": "Review this C# code: string name = null; Console.WriteLine(name.Length);"
+            "content": """
+Review this C# code and tell me the issues:
+
+string name = null;
+Console.WriteLine(name.Length);
+"""
         }
     ]
 )
