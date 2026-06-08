@@ -40,4 +40,9 @@ response = client.chat.completions.create(
     ]
 )
 
-print(response.choices[0].message.content)
+review_result = response.choices[0].message.content
+
+with open("review.json", "w") as f:
+    f.write(review_result)
+
+print(review_result)
