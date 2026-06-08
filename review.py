@@ -1,1 +1,18 @@
-print("AI Code Review Started")
+from groq import Groq
+import os
+
+client = Groq(
+    api_key=os.getenv("GROQ_API_KEY")
+)
+
+response = client.chat.completions.create(
+    model="llama-3.3-70b-versatile",
+    messages=[
+        {
+            "role": "user",
+            "content": "Review this C# code: string name = null; Console.WriteLine(name.Length);"
+        }
+    ]
+)
+
+print(response.choices[0].message.content)
