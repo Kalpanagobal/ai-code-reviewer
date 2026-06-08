@@ -11,10 +11,19 @@ with open("Program.cs", "r") as f:
 prompt = f"""
 Review this C# code.
 
-Find:
-1. Bugs
-2. Security Issues
-3. Performance Issues
+Return ONLY valid JSON.
+
+Format:
+
+{{
+  "issues": [
+    {{
+      "severity": "High/Medium/Low",
+      "issue": "Issue Name",
+      "suggestion": "Fix"
+    }}
+  ]
+}}
 
 Code:
 
