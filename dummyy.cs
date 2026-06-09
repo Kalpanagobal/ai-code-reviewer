@@ -18,7 +18,12 @@ if (string.IsNullOrEmpty(password)) throw new InvalidOperationException("Missing
 
         int a = 10;
         int b = 0;
-        int result = a / b; // divide by zero bug
+        if (b == 0)
+{
+    Console.WriteLine("Error: Cannot divide by zero.");
+    return;
+}
+int result = a / b; // divide by zero bug  // safe — zero-check added above
 
         Console.WriteLine("Result: " + result);
     }
