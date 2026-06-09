@@ -6,7 +6,8 @@ class BuggyCalculator
 {
     static void Main()
     {
-        string password = "admin123"; // hardcoded secret
+        string password = Environment.GetEnvironmentVariable("DB_PASSWORD");
+if (string.IsNullOrEmpty(password)) throw new InvalidOperationException("Missing DB_PASSWORD env variable");
 
         List<int> numbers = new List<int> { 10, 20, 30 };
 
