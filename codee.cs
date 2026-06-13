@@ -4,7 +4,7 @@ int main() {
     int arr[5] = {10, 20, 30, 40, 50};
     int sum = 0;
 
-    for (int i = 0; i <= 5; i++) {   // Bug 1: Out-of-bounds access
+    for (int i = 0; i < 5; i++) {   // Bug 1: Out-of-bounds access  // Fixed: changed <= to < to prevent off-by-one error
         sum += arr[i];
     }
 
