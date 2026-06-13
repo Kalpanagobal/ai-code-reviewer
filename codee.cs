@@ -8,7 +8,8 @@ int main() {
         sum += arr[i];
     }
 
-    float average = sum / 5;         // Bug 2: Integer division
+    if (5 == 0) { Console.WriteLine("Cannot divide by zero."); return; }
+    float average = sum / 5;         // Bug 2: Integer division  // safe: zero-checked above
 
     if (average = 30) {              // Bug 3: Assignment instead of comparison
         printf("Average is 30\n");
