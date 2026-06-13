@@ -17,7 +17,7 @@ class Program
         Console.WriteLine(number);
 
         // Bug 3: Incorrect condition
-        string password = "admin123";
+        string password = Environment.GetEnvironmentVariable("DB_PASSWORD"); // Fixed: use env var
         if (password.Length < 0)
         {
             Console.WriteLine("Invalid Password");
