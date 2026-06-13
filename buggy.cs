@@ -26,7 +26,8 @@ class Program
 
         // Bug 4: Format exception
         string ageText = "Twenty";
-        int age = int.Parse(ageText);
+        if (!int.TryParse(ageText, out int age))
+        { Console.WriteLine("Invalid input."); return; }
 
         // Bug 5: Null reference
         string email = null;
