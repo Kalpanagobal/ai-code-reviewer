@@ -26,7 +26,8 @@ class Program
         // Bug 4: Divide by zero
         int x = 100;
         int y = 0;
-        Console.WriteLine(x / y);
+        if (y == 0) { Console.WriteLine("Cannot divide by zero."); return; }
+        Console.WriteLine(x / y);  // safe: zero-checked above
 
         // Bug 5: Invalid cast
         object obj = "50";
