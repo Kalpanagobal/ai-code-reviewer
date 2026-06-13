@@ -52,7 +52,8 @@ if (b == 0)
     Console.WriteLine("Error: Cannot divide by zero.");
     return;
 }
-int result = a / b; // divide by zero bug  // safe — zero-check added above  // safe — zero-check added above  // safe — zero-check added above  // safe — zero-check added above  // safe — zero-check added above
+if (b == 0) { Console.WriteLine("Cannot divide by zero."); return; }
+int result = a / b; // divide by zero bug  // safe — zero-check added above  // safe — zero-check added above  // safe — zero-check added above  // safe — zero-check added above  // safe — zero-check added above  // safe: zero-checked above
 
         Console.WriteLine("Result: " + result);
     }
