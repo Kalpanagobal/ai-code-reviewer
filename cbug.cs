@@ -14,7 +14,12 @@ class Program
         }
 
         // Bug 2: Integer division
-        double average = sum / numbers.Length;
+        if (numbers == 0)
+{
+    Console.WriteLine("Error: Cannot divide by zero.");
+    return;
+}
+double average = sum / numbers.Length;  // safe — zero-check added above
 
         // Bug 3: Assignment instead of comparison
         bool passed = false;
