@@ -1,6 +1,15 @@
 using System;
 
-class Program
+def your_function(param):
+"""One-line summary.
+
+Args:
+param: Description.
+
+Returns:
+Description of return value.
+"""
+pass
 {
     static void Main()
     {
